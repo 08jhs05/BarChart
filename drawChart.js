@@ -15,7 +15,7 @@ button.addEventListener("click", function() {
   }catch (err){text.textContent = "Invalid format!"}
 });
 
-function hideElements(){
+function hideElements(){            //hide button, textarea, messages when button is clicked
   button.style.display = "none"
   text.style.display = "none"
   form.style.display = "none"
@@ -26,21 +26,25 @@ function drawChart(data, options){
   let w = canvas.width;
   let h = canvas.height;
 
-  ctx.transform(1, 0, 0, -1, 0, h);
-
-  ctx.fillStyle = "#2C599D";
+  ctx.transform(1, 0, 0, -1, 0, h);   //reverse y direction so y starts from bottom
+  ctx.fillStyle = "#2C599D";          //draw backgrounds
   ctx.fillRect(0, 0, w, h);
+
+  let barXoffset = w/10;
+  let barYoffset = h/10;
 
   let dataAsArray = convertObjectToArray(data);
   let maximumValue = getMaximumValueFromDataArray(dataAsArray);
-  //barwidth? barsXoffset? barsYoffset?
+  let barwidth = (w-barXoffset)/(dataAsArray.length*2);
 
   for(let i = 0; i<dataAsArray.length; i++){
     ctx.fillStyle = "#F98125";
-    ctx.fillRect(w*i/dataAsArray.length, 0, w/10, h*dataAsArray[i][1]/maximumValue);
+    ctx.fillRect(barwidth*i*2 + barXoffset, barYoffset, barwidth, (h-barYoffset)*dataAsArray[i][1]/maximumValue);
   }
   
-  function convertObjectToArray(data){
+  //Local functions to make code look cleaner
+
+  function convertObjectToArray(data){  //read recieved Json data into array format
     let arr = [];
     for(let property in data){
       arr.push([property, data[property]]);
@@ -55,4 +59,6 @@ function drawChart(data, options){
     });
     return max
   }
+
+  //local functions end
 }
