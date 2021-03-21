@@ -11,7 +11,10 @@
     </canvas> -->
     <div id = "container">
       <div id = "text">Please enter data in JS object format.</div>
-      <button id = "btn">Centered Button</button>
+      <form id = "dataInput">
+        <input type="text" id="fname" name="fname">
+      </form>
+      <button id = "btn">Get Chart!</button>
     </div>
     <script>
 
@@ -23,15 +26,16 @@
     </script>
     <script>
       //var parentOffset = $('#container').offset();
-      let containerElm = document.getElementById("container");
+      let container = document.getElementById("container");
       let button = document.getElementById("btn");
       let text = document.getElementById("text");
-
-      button.style.top = containerElm.offsetTop + containerElm.offsetHeight/2 - button.offsetHeight/2 + 'px';
-      button.style.left = containerElm.offsetLeft + containerElm.offsetWidth/2 - button.offsetWidth/2  + 'px';
+      let form = document.getElementById("dataInput");
       
-      text.style.top = button.offsetTop - text.offsetHeight  + 'px';
-      text.style.left = containerElm.offsetLeft + containerElm.offsetWidth/2 - text.offsetWidth/2  + 'px';
+      // button.style.top = container.offsetTop + container.offsetHeight/2 - button.offsetHeight/2 + 'px';
+      // button.style.left = container.offsetLeft + container.offsetWidth/2 - button.offsetWidth/2  + 'px';
+      
+      // form.style.top = button.offsetTop - form.offsetHeight  + 'px';
+      // form.style.left = container.offsetLeft + container.offsetWidth/2 - form.offsetWidth/2  + 'px';
      
       console.log(button.offsetTop);
     </script>
