@@ -8,9 +8,9 @@
     <h1>VERY VERY SPECIAL AND UNIQUE BAR CHART</h1>
     <div id = "container">
       <canvas id = "chart"></canvas>
-      <div id = "text">Please enter data in JS object format.</div>
-      <form id = "dataInput">
-        <input type="text" id="fname" name="fname">
+      <div id = "text">Please enter data in JS object format.<br>Example: {asdasd}</div>
+      <form id = "dataForm">
+        <textarea></textarea>
       </form>
       <button id = "btn">Get Chart!</button>
     </div>
@@ -18,7 +18,7 @@
       let container = document.getElementById("container");
       let button = document.getElementById("btn");
       let text = document.getElementById("text");
-      let form = document.getElementById("dataInput");
+      let form = document.getElementById("dataForm");
 
       button.addEventListener("click", function() {
         let canvas = document.getElementById("chart");
