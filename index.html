@@ -6,10 +6,8 @@
   </head>
   <body>
     <h1>VERY VERY SPECIAL AND UNIQUE BAR CHART</h1>
-    <!-- <canvas id="myCanvas" width="600" height="600">
-      <button type="button">Click Me!</button> 
-    </canvas> -->
     <div id = "container">
+      <canvas id = "chart"></canvas>
       <div id = "text">Please enter data in JS object format.</div>
       <form id = "dataInput">
         <input type="text" id="fname" name="fname">
@@ -17,27 +15,18 @@
       <button id = "btn">Get Chart!</button>
     </div>
     <script>
-
-      //var canvas = document.getElementById("myCanvas");
-      //var ctx = canvas.getContext("2d");
-      //ctx.fillStyle = "#FF0000";
-      //ctx.fillRect(0, 0, 600, 600);
-
-    </script>
-    <script>
-      //var parentOffset = $('#container').offset();
       let container = document.getElementById("container");
       let button = document.getElementById("btn");
       let text = document.getElementById("text");
       let form = document.getElementById("dataInput");
-      
-      // button.style.top = container.offsetTop + container.offsetHeight/2 - button.offsetHeight/2 + 'px';
-      // button.style.left = container.offsetLeft + container.offsetWidth/2 - button.offsetWidth/2  + 'px';
-      
-      // form.style.top = button.offsetTop - form.offsetHeight  + 'px';
-      // form.style.left = container.offsetLeft + container.offsetWidth/2 - form.offsetWidth/2  + 'px';
-     
-      console.log(button.offsetTop);
+
+      button.addEventListener("click", function() {
+        let canvas = document.getElementById("chart");
+        let ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 600, 600);
+      }); 
+
     </script>
   </body>
 </html>
