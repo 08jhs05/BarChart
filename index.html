@@ -11,7 +11,7 @@
       <canvas id = "chart"></canvas>
       <div id = "text">Please enter data in JS object format.<br>Example: {"apple":4, "grape":7, "orange":5}</div>
       <form id = "dataForm">
-        <textarea id = "dataInput"></textarea>
+        <textarea id = "dataInput">{"apple":4, "grape":7, "orange":5}</textarea>
       </form>
       <button id = "btn">Get Chart!</button>
     </div>
@@ -29,7 +29,7 @@
         try{
           data = JSON.parse(dataInput.value);
           hideElements();
-          drawChart();
+          drawChart(data, "");
         }catch (err){text.textContent = "Invalid format!"}
 
         console.log(data);
@@ -41,10 +41,41 @@
         form.style.display = "none"
       }
 
-      function drawChart(){
+      function drawChart(data, options){
         let ctx = canvas.getContext("2d");
-        ctx.fillStyle = "#FF0000";
-        ctx.fillRect(0, 0, 600, 600);
+        let w = canvas.width;
+        let h = canvas.height;
+
+        ctx.transform(1, 0, 0, -1, 0, h);
+
+        ctx.fillStyle = "#2C599D";
+        ctx.fillRect(0, 0, w, h);
+
+        let dataAsArray = convertObjectToArray(data);
+        let maximumValue = getMaximumValueFromDataArray(dataAsArray);
+
+        console.log(maximumValue);
+
+        for(let i = 0; i<dataAsArray.length; i++){
+          ctx.fillStyle = "#F98125";
+          ctx.fillRect(w*i/dataAsArray.length, 0, w/10, h*dataAsArray[i][1]/maximumValue);
+        }
+        
+        function convertObjectToArray(data){
+          let arr = [];
+          for(let property in data){
+            arr.push([property, data[property]]);
+          }
+          return arr;
+        }
+
+        function getMaximumValueFromDataArray(data){
+          let max = 0;
+          data.forEach((value) => {
+            if(value[1] > max) max = value[1];
+          });
+          return max
+        }
       }
 
     </script>
