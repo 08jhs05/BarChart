@@ -31,8 +31,6 @@
           hideElements();
           drawChart(data, "");
         }catch (err){text.textContent = "Invalid format!"}
-
-        console.log(data);
       });
 
       function hideElements(){
@@ -53,8 +51,7 @@
 
         let dataAsArray = convertObjectToArray(data);
         let maximumValue = getMaximumValueFromDataArray(dataAsArray);
-
-        console.log(maximumValue);
+        //barwidth? barsXoffset? barsYoffset?
 
         for(let i = 0; i<dataAsArray.length; i++){
           ctx.fillStyle = "#F98125";
