@@ -10,15 +10,8 @@
       <button type="button">Click Me!</button> 
     </canvas> -->
     <div id = "container">
-      <div id = "vertical-center">
-        <div id = "text">Please enter data in JS object format.</div>
-        <button>Centered Button</button>
-        <script>
-          //var parentOffset = $('#container').offset();
-          let offsetContainer = [document.getElementById("container").offsetTop, document.getElementById("container").offsetLeft];
-          console.log(offsetContainer);
-          </script>
-      </div>
+      <div id = "text">Please enter data in JS object format.</div>
+      <button id = "btn">Centered Button</button>
     </div>
     <script>
 
@@ -27,6 +20,20 @@
       //ctx.fillStyle = "#FF0000";
       //ctx.fillRect(0, 0, 600, 600);
 
+    </script>
+    <script>
+      //var parentOffset = $('#container').offset();
+      let containerElm = document.getElementById("container");
+      let button = document.getElementById("btn");
+      let text = document.getElementById("text");
+
+      button.style.top = containerElm.offsetTop + containerElm.offsetHeight/2 - button.offsetHeight/2 + 'px';
+      button.style.left = containerElm.offsetLeft + containerElm.offsetWidth/2 - button.offsetWidth/2  + 'px';
+      
+      text.style.top = button.offsetTop - text.offsetHeight  + 'px';
+      text.style.left = containerElm.offsetLeft + containerElm.offsetWidth/2 - text.offsetWidth/2  + 'px';
+     
+      console.log(button.offsetTop);
     </script>
   </body>
 </html>
