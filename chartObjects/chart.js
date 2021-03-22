@@ -1,27 +1,18 @@
 import { Bar } from './bar.js';
 
 export class Chart{
-  constructor(name){
-    this.myBar = new Bar(name);
+  constructor(){
+    this.bars = [];
   }
 
-  test(){
-    this.myBar.printName();
+  putData(data){
+    for(let i=0; i<data.length ;i++){
+      let newBar = new Bar(data[i]);
+      this.bars.push(newBar);
+    }
   }
 
-  readDataIntoBars(){
-
-  }
-
-  draw(){
-    
-  }
-
-  drawAxes(){
-    
-  }
-
-  drawBars(){
-
+  clear(){
+    this.bars = [];
   }
 }

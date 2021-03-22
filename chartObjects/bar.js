@@ -1,9 +1,6 @@
 export class Bar{
-  constructor(name){
-    this.name = name;
-  }
-
-  draw(){
-
+  constructor(data){
+    this.dataLabel = data[0];
+    this.dataValue = data[1];
   }
 }
