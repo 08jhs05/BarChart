@@ -18,6 +18,7 @@ const myData = new Data();
 const myChart = new Chart();
 const canvas = new ChartCanvas(document.getElementById("myCanvas"));
 
+//add listener to getchartbutton, chart will show up when button is clicked
 getChartButton.dom.addEventListener("click", function() {
   try{
     myData.readData(JSON.parse(myTextArea.dom.value));
@@ -28,6 +29,7 @@ getChartButton.dom.addEventListener("click", function() {
   }catch (err){myMessageTxt.dom.textContent = "Invalid data format!"}
 });
 
+//add listener to reset button which resets chart and shows data input form again
 resetButton.dom.addEventListener("click", reset);
 
 function toggleHide(){
