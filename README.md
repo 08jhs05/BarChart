@@ -54,7 +54,7 @@ This is inevitable since the tick size is set to a fixed pixel value. Labels rep
 
 ## External Resources, libraries(?) Used
 
-JS Canvas object was used to draw charts
+JS Canvas object used to draw charts
 
 Tutorials:
 
