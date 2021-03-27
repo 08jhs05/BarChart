@@ -6,7 +6,7 @@ Lighthouse Lab Compass stretch project - A sexy bar chart with adjustable colour
 
 ## How to run
 
-Running index.html locally on your browser will give errors - It must run on localhost.
+Running index.html locally on browser will give errors - It must run on localhost.
 http-server (https://www.npmjs.com/package/http-server) was used for this demo.
 
 Install http-server via npm on terminal:
