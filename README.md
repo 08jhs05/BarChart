@@ -24,7 +24,7 @@ Then open http://localhost:8080/ on your browser.
 ![2222](https://user-images.githubusercontent.com/54612573/112731281-a7a63800-8f0c-11eb-963c-53cc32aea5b4.jpg)
 
 Simply enter data into the textarea and click "Get Chart!" button to show the bar chart.
-Data must be in a JS object format:
+Data must be in JS object format:
 
     {string: number, string:number, ..... }
    
