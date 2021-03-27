@@ -2,4 +2,8 @@
 dasdasdasdas
 asdasdasd
 
-### something something
+### Usage
+
+    npm install --global http-server
+
+### Features
