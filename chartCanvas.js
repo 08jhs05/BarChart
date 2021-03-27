@@ -1,10 +1,17 @@
+const BLUE = "#2C599D";
+const WHITE = "#FFFFFF";
+const ORANGE = "#FFA500";
+const GREEN = "#008000";
+const RED = "#FF0000";
+
 export class ChartCanvas{
   constructor(htmlElement){
     this.dom = htmlElement;
     this.chart = undefined;
     this.maxValue = undefined;
-    this.barColor = "#F98125";
-    this.labelColor = "#FFFFFF";
+    this.barColor = WHITE;
+    this.labelColor = WHITE;
+    this.axesColor = WHITE;
     this.fontSize = "10px";
     this.fontColor = "Arial"
   }
@@ -25,7 +32,7 @@ export class ChartCanvas{
     let barWidth = (w-barXoffset)/(this.chart.bars.length*2);
 
     context.clearRect(0, 0, w, h);
-    context.fillStyle = "#2C599D";           //draw backgrounds
+    context.fillStyle = BLUE;           //draw backgrounds
     context.fillRect(0, 0, w, h);
 
     //draw bars
@@ -41,7 +48,7 @@ export class ChartCanvas{
     }
 
     //draw axes
-    context.fillStyle = this.labelColor;
+    context.fillStyle = this.axesColor;
     context.fillRect(barXoffset, h-barYoffset, w-barXoffset, 2);
     context.fillRect(barXoffset, h-barYoffset+2, -4, -h);
 
@@ -49,7 +56,7 @@ export class ChartCanvas{
     for(let j = 0; j<this.maxValue; j++){
       let tickwidth = 10;
       let tickheight = 2;
-      context.fillStyle = this.labelColor;
+      context.fillStyle = this.axesColor;
       context.fillRect(barXoffset - tickwidth - 5, (h-barYoffset)*j/this.maxValue, tickwidth, tickheight);
     }
   }
@@ -60,4 +67,14 @@ export class ChartCanvas{
     this.chart = undefined;
     this.maxValue = undefined;
   }
+
+  // set barColor(color){
+  //   this.barColor = color;
+  // }
+  // set labelColor(color){
+  //   this.labelColor = color;
+  // }
+  // set fontSize(size){
+  //   this.fontSize = size;
+  // }
 }
