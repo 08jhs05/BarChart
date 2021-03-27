@@ -28,6 +28,8 @@ Data must be in JS object format:
 
     {string:number, string:number, ..... }
    
+ Otherwise it will show an error message and won't show the chart. 
+   
 ![reset](https://user-images.githubusercontent.com/54612573/112731179-1df66a80-8f0c-11eb-8ada-18a958e7c165.jpg)
 
 Press RESET button to reset the chart and enter new data.
