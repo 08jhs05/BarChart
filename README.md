@@ -38,4 +38,26 @@ Bar colour, label colour, and axes colour are adjustable via selection box below
 
 ## Examples
 
+![ex1](https://user-images.githubusercontent.com/54612573/112732418-3799b100-8f10-11eb-99c4-f7d48a48bcf8.jpg)
 
+![ex2](https://user-images.githubusercontent.com/54612573/112732500-ae36ae80-8f10-11eb-982b-ee8efbb604d3.jpg)
+
+![ex3](https://user-images.githubusercontent.com/54612573/112732572-24d3ac00-8f11-11eb-95c3-28521a0e231f.jpg)
+
+## Bugs/Issues
+
+Ticks get messy when the data received has large values(>100):
+
+![issue](https://user-images.githubusercontent.com/54612573/112732357-d8d43780-8f0f-11eb-918d-082d5fd15260.jpg)
+
+This is inevitable since the tick size is set to a fixed pixel value. Labels representing values also look odd because they have fixed pixel positions.
+
+## External Resources, libraries(?) Used
+
+JS Canvas object was used to draw charts
+
+Tutorials:
+
+- W3schools
+- Mozila
+- Lighthouse Compass
