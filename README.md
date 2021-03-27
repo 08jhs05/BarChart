@@ -1,6 +1,8 @@
 # BAR CHART
-dasdasdasdas
-asdasdasd
+
+![Screen Shot 2021-03-27 at 2 26 10 PM](https://user-images.githubusercontent.com/54612573/112730708-63656880-8f09-11eb-821e-27e0b744f1a0.png)
+
+Lighthouse Lab Compass stretch project: A sexy bar chart with adjustable colours
 
 ## Usage
 
@@ -14,7 +16,5 @@ Install http-server via npm on terminal:
 Then navigate to where this project folder is located and run this command:
 
     http-server
-
-
 
 ## Usage
