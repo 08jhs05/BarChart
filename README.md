@@ -21,7 +21,7 @@ Then open http://localhost:8080/ on your browser.
 
 ## Usage
 
-![1111](https://user-images.githubusercontent.com/54612573/112731098-b0e2d500-8f0b-11eb-8303-25893b1d04ed.jpg)
+![2222](https://user-images.githubusercontent.com/54612573/112731281-a7a63800-8f0c-11eb-963c-53cc32aea5b4.jpg)
 
 Simply enter data into the textarea and click "Get Chart!" button to show the bar chart.
 Data must be in a JS object format:
@@ -37,3 +37,5 @@ Press RESET button to reset the chart and enter new data.
 Bar colour, label colour, and axes colour are adjustable via selection box below.
 
 ## Examples
+
+
