@@ -2,7 +2,7 @@
 
 ![Screen Shot 2021-03-27 at 2 32 51 PM](https://user-images.githubusercontent.com/54612573/112730742-9d366f00-8f09-11eb-9501-7d17cd7e59a5.png)
 
-Lighthouse Lab Compass stretch project - A sexy bar chart with adjustable colours
+Lighthouse Lab Compass stretch project - A simple bar chart with adjustable colours
 
 ## How to run
 
